@@ -14,10 +14,12 @@ plainwhite:
   sitemap: false # set to true to generate sitemap.xml content
 
   navigation:
-    - title: General
-      url: "/general"
+    - title: Home
+      url: "/"
     - title: Reading List
       url: "/reading-list"
+    - title: Blog
+      url: "/blog"
 
   # generate social links in footer
   social_links:
