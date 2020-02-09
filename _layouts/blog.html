@@ -9,10 +9,12 @@ layout: default
 {{ content }}
 
 {%- if site.posts.size > 0 -%}
-  <ul class="posts">
+  <ul class="base-layout">
     <li>
-      <h1 id="posts-label">Blog</h1>
+      <h1 id="page-label">Blog</h1>
     </li>
+
+
 
     {%- for post in site.posts -%}
       <li>
@@ -43,3 +45,4 @@ layout: default
 		<use xlink:href="{{ '/assets/minima-social-icons.svg#rss' | relative_url }}"></use>
 	</svg><a href="{{ "/feed.xml" | relative_url }}">Subscribe</a></p> -->
 {%- endif -%}
+</ul>

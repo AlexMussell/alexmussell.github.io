@@ -200,8 +200,8 @@ main {
   line-height: 1.2em;
   font-size: 28px;
 }
-.posts,
-.post-container {
+.base-layout,
+.base-container {
   list-style-type: none;
   margin: 45px 30px;
   @media screen and (max-width: $smallMobileW) {
@@ -213,7 +213,7 @@ main {
     margin-top: 0;
   }
 }
-.post-container {
+.base-container {
   padding-left: 30px;
 }
 .post {
@@ -239,7 +239,7 @@ main {
   }
 }
 
-#posts-label {
+#page-label {
   border-bottom: 1px solid #eee;
   font-size: 15px;
   color: #777;
@@ -248,3 +248,9 @@ main {
   padding-bottom: 10px;
   font-weight: normal;
 }
+
+// .resize {
+//   float:  left;
+//   width:  300px;
+//   height: 300px;
+// }

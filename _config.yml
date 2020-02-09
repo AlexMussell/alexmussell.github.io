@@ -11,7 +11,7 @@ plainwhite:
   name: Alexander Mussell
   tagline: SRE. Weightlifting. Reading.
   date_format: "%b %-d, %Y"
-  sitemap: false # set to true to generate sitemap.xml content
+  sitemap: false
 
   navigation:
     - title: Home
@@ -21,17 +21,13 @@ plainwhite:
     - title: Blog
       url: "/blog"
 
-  # generate social links in footer
   social_links:
     github:  AlexMussell
     rss: rss
 
-# If you want to link only specific pages in your header, uncomment
-# this and add the path to the pages in order as they should show up
-# header_pages:
-# - about.md
+  # reading_list:
+  #   beyond-good-and-evil: https://www.amazon.co.uk/Beyond-Good-Evil-Friedrich-Nietzsche/dp/1497415764
 
-# Build settings
 theme: plainwhite
 
 plugins:
