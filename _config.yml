@@ -28,7 +28,9 @@ plainwhite:
   # reading_list:
   #   beyond-good-and-evil: https://www.amazon.co.uk/Beyond-Good-Evil-Friedrich-Nietzsche/dp/1497415764
 
-theme: plainwhite
+
+# Build settings
+remote_theme: plainwhite
 
 plugins:
   - jekyll-seo-tag
