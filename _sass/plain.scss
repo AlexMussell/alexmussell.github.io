@@ -263,14 +263,13 @@ main {
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
-  transition: transform .1s
-
 }
 
 .book-images{
   height: 200px;
   width: 200px;
   object-fit: scale-down;
+  transition: transform .2s
 }
 
 
