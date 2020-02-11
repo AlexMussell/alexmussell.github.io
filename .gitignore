@@ -61,3 +61,4 @@ _site/
 .jekyll-metadata
 sitemap.xml
 plainwhite.gemspec
+node_modules
