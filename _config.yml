@@ -5,6 +5,8 @@ description: >
   Start of a weekly blog. Mainly to track progress over the weeks. Expect changes as I move away from Jekyll.
 show_excerpts: true 
 
+url: https://alexmussell.github.io/
+
 sass:
   sass_dir: _sass
 plainwhite:
