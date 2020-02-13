@@ -2,10 +2,8 @@
   "name": "alexmussell.github.io",
   "version": "1.0.0",
   "description": "Personal website generated using [Jekyll](https://jekyllrb.com/), with a an adapted [theme](http://jekyllthemes.org/themes/PlainWhite-Jekyll/).",
-  "main": "assets/js/search-script.js",
-  "dependencies": {
-    "simple-jekyll-search": "^1.7.3"
-  },
+  "main": "",
+  "dependencies": {},
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
