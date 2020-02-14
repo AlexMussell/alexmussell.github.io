@@ -268,12 +268,27 @@ main {
   transform: scale(1.2);
 }
 
+// .email-me-button{
+//   display: inline-block;
+//   padding: 0.35em 1.2em;
+//   border: 0.1em solid #777;
+//   margin: 0 0.3em 0.3em 0;
+//   // border-radius: 0.12em;
+//   box-sizing: border-box;
+//   text-decoration: none;
+//   font-family: Raleway, sans-serif;
+//   font-weight: 300;
+//   color: #777;
+//   text-align: center;
+//   transition: all 0.2s;
+// }
+
 .email-me-button{
   display: inline-block;
   padding: 0.35em 1.2em;
   border: 0.1em solid #777;
   margin: 0 0.3em 0.3em 0;
-  border-radius: 0.12em;
+  border-radius: 1em;
   box-sizing: border-box;
   text-decoration: none;
   font-family: Raleway, sans-serif;
