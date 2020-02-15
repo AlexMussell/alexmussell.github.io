@@ -29,9 +29,13 @@ plainwhite:
   #   beyond-good-and-evil: https://www.amazon.co.uk/Beyond-Good-Evil-Friedrich-Nietzsche/dp/1497415764
 
 
+paginate: 5
+paginate_path: "/_layouts/page:num/"
+
 # Build settings
 remote_theme: plainwhite
 
 plugins:
   - jekyll-seo-tag
+  - jekyll-paginate
 #  - jekyll-feed
