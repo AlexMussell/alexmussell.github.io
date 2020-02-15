@@ -330,9 +330,10 @@ main {
 }
 
 .company-details{
-  width: 200px;
+  flex: 1 1 0px
+  
 }
 
 .job-description{
-  flex-grow: 1;
+  width: 450px
 }
