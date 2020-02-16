@@ -331,10 +331,18 @@ main {
 }
 
 .company-details{
-  flex: 1 1 0px
-  
+  width: 220px;
 }
 
-.job-description{
-  width: 450px
+.job-description{ 
+  flex: 1 1 0px;
 }
+
+// .company-details{
+//   flex: 1 1 0px
+// }
+
+// .job-description{
+//   width: 450px
+// }
+
