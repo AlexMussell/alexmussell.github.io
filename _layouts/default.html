@@ -4,6 +4,16 @@
     {%- include head.html -%}
   </head>
   <body>
+
+    <div class="theme-switch-wrapper">
+      <label class="theme-switch" for="checkbox">
+          <input type="checkbox" id="checkbox" />
+          <div class="slider round"></div>
+      </label>
+      <em class=>Dark Mode</em>
+    </div>
+  
+
     <main class="container">
       <section class="about">
         <a href="/"><img src="{{ "/assets/portfolio.png" | relative_url }}" alt="{{ site.plainwhite.name }}"></a>
@@ -41,4 +51,7 @@
       </section>
     </main>
   </body>
+
+  <script src="/assets/js/main.js"></script>
+
 </html>

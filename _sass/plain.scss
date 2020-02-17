@@ -14,6 +14,96 @@ $leftWidth: 220px;
   box-sizing: border-box;
 }
 
+// Dark mode
+:root {
+  --background-color: #ffffff;
+  --title-name-link-colour: #000;
+  --tagline: #aaa;
+  --page-text: #222222;
+  --border-bottom: #ececec;
+  --category-box: #e3e3e3;
+  --post-date-colour: #555;
+  --title-underline: #eee;
+  --secondary-colour: #777;
+  --code-highlight: #f4f4f4;
+  --post-category: #000;
+}
+
+[data-theme="dark"] {
+  --background-color: #110f0f;
+  --title-name-link-colour: rgb(211, 211, 211);
+  --tagline: rgb(70, 70, 70);
+  --page-text: #b6b6b6;
+  --border-bottom: #202020;
+  --category-box: #333333;
+  --post-date-colour: rgb(206, 206, 206);
+  --title-underline: rgb(39, 39, 39);
+  --secondary-colour: rgb(175, 175, 175);
+  --code-highlight: #222222;
+  --post-category: #fff;
+}
+
+// Dark mode button
+.theme-switch-wrapper {
+  display: flex;
+  align-items: center;
+
+  em {
+    margin-left: 10px;
+    font-size: 1rem;
+    color: var(--page-text); 
+  }
+}
+.theme-switch {
+  display: inline-block;
+  height: 34px;
+  position: relative;
+  width: 60px;
+}
+
+.theme-switch input {
+  display:none;
+}
+
+.slider {
+  background-color: #ccc;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: .4s;
+}
+
+.slider:before {
+  background-color: #fff;
+  bottom: 4px;
+  content: "";
+  height: 26px;
+  left: 4px;
+  position: absolute;
+  transition: .4s;
+  width: 26px;
+}
+
+input:checked + .slider {
+  background-color: #66bb6a;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+// Page
 body {
   font-family: "Raleway", sans-serif;
   font-size: 16px;
@@ -21,6 +111,7 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--background-color);
 }
 
 img,
@@ -31,7 +122,7 @@ video {
 }
 
 a {
-  color: #000;
+  color: var(--title-name-link-colour);
   transition: color 0.3s;
   &:hover {
     color: $linkColor;
@@ -91,13 +182,13 @@ main {
       font-size: 22px;
       margin-top: 25px;
       margin-bottom: 0;
-      color: #222222;
+      color: var(--page-text);
       font-weight: normal;
     }
     .tagline {
       font-size: 22px;
       margin-top: 17px;
-      color: #aaa;
+      color: var(--tagline);
       white-space: pre-wrap;
       line-height: normal;
     }
@@ -143,7 +234,7 @@ main {
       text-align: center;
       padding: 1rem 0;
       text-decoration: none;
-      border-bottom: 1px solid #ececec;
+      border-bottom: 1px solid var(--border-bottom);
 
       @media screen and (max-width: $mobileW) {
         padding: 2rem 0;
@@ -153,7 +244,7 @@ main {
 }
 
 .post-wrapper {
-  border-bottom: 1px solid #ececec;
+  border-bottom: 1px solid var(--border-bottom);
   margin-bottom: 1rem;
   padding-bottom: 1rem;
 }
@@ -162,10 +253,11 @@ main {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  color: var(--post-category);
   li {
     font-size: 14px;
     float: left;
-    background-color: #e3e3e3;
+    background-color: var(--category-box);
     padding: 5px 20px;
     border-radius: 2px;
     @media screen and (max-width: $mobileW) {
@@ -177,7 +269,7 @@ main {
 }
 .post-date {
   margin-right: 10px;
-  color: #555;
+  color: var(--post-date-colour);
   min-width: 150px;
 }
 .post-meta {
@@ -219,7 +311,7 @@ main {
 .post {
   font-family: "Merriweather", sans-serif;
   font-weight: 300;
-  color: #222;
+  color: var(--page-text);
   line-height: 1.9em;
   a {
     color: $linkColor;
@@ -240,9 +332,9 @@ main {
 }
 
 #page-label {
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid var(--title-underline);
   font-size: 15px;
-  color: #777;
+  color: var(--secondary-colour);
   text-transform: uppercase;
   letter-spacing: 0.5px;
   padding-bottom: 10px;
@@ -286,27 +378,28 @@ main {
 .comms-button{
   display: inline-block;
   padding: 0.5em 1.7em;
-  border: 0.1em solid #777;
+  border: 0.1em solid var(--secondary-colour);
   margin: 0 0.3em 0.3em 0;
   border-radius: 1.2em;
   box-sizing: border-box;
   text-decoration: none;
   font-family: Raleway, sans-serif;
   font-weight: 300;
-  color: #777;
+  color: var(--secondary-colour);
   text-align: center;
   transition: all 0.2s;
+  background-color: var(--background-color);
 }
 
 .comms-button:hover{
-  color:  #777;
-  background-color: #FFFFFF;
+  color: var(--background-color);
+  background-color: var(--secondary-colour);
 }
 
 
 .employment-header{
   padding-top: 15px;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid var(--title-underline);
   font-family: Raleway, sans-serif;
 }
 
@@ -318,11 +411,13 @@ main {
   padding-top: 30px;
   margin: 0 auto;
   width: 90%;
+  color: var(--page-text);
 }
 
 .employment-container{
   margin: 0 auto;
   width: 90%;
+  color: var(--page-text);
 }
 
 .cv-listing{

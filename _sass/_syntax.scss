@@ -1,7 +1,9 @@
 @import 'ext/solarized-light';
 
+:root
+
 .highlight {
-	background-color: #f4f4f4;
+	background-color: var(--code-highlight);
 }
 
 div.highlight {
