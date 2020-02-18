@@ -14,7 +14,12 @@ layout: default
       <h1 id="page-label">Blog</h1>
     </li>
 
-
+    {% assign filename = "/search.html" %}
+    <form action="{{ site.baseurl | append: filename }}" method="get">
+      <label for="search-box">Search</label>
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
 
     {%- for post in site.posts -%}
       <li>
