@@ -25,10 +25,6 @@ plainwhite:
     github:  AlexMussell
     rss: rss
 
-  # reading_list:
-  #   beyond-good-and-evil: https://www.amazon.co.uk/Beyond-Good-Evil-Friedrich-Nietzsche/dp/1497415764
-
-
 # Build settings
 remote_theme: plainwhite
 
