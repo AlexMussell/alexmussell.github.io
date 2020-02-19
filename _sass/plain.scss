@@ -16,20 +16,6 @@ $leftWidth: 220px;
 
 // Dark mode
 :root {
-  --background-color: #ffffff;
-  --title-name-link-colour: #000;
-  --tagline: #aaa;
-  --page-text: #222222;
-  --border-bottom: #ececec;
-  --category-box: #e3e3e3;
-  --post-date-colour: #555;
-  --title-underline: #eee;
-  --secondary-colour: #777;
-  --code-highlight: #f4f4f4;
-  --post-category: #000;
-}
-
-[data-theme="dark"] {
   --background-color: #110f0f;
   --title-name-link-colour: rgb(211, 211, 211);
   --tagline: rgb(70, 70, 70);
@@ -41,6 +27,20 @@ $leftWidth: 220px;
   --secondary-colour: rgb(175, 175, 175);
   --code-highlight: #222222;
   --post-category: #fff;
+}
+
+[data-theme="light"] {
+  --background-color: #ffffff;
+  --title-name-link-colour: #000;
+  --tagline: #aaa;
+  --page-text: #222222;
+  --border-bottom: #ececec;
+  --category-box: #e3e3e3;
+  --post-date-colour: #555;
+  --title-underline: #eee;
+  --secondary-colour: #777;
+  --code-highlight: #f4f4f4;
+  --post-category: #000;
 }
 
 // Dark mode button
