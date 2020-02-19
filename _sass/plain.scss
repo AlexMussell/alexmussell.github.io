@@ -246,6 +246,12 @@ main {
   }
 }
 
+.post-content-container{
+  width: 90%;
+  margin-left:auto;
+  margin-right:auto;
+}
+
 .post-wrapper {
   border-bottom: 1px solid var(--border-bottom);
   margin-bottom: 1rem;
@@ -316,6 +322,7 @@ main {
   font-weight: 300;
   color: var(--page-text);
   line-height: 1.9em;
+  border-bottom: 1px solid var(--title-underline);
   a {
     color: $linkColor;
     text-decoration: none;
