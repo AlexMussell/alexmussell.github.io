@@ -1,14 +1,18 @@
 ---
 layout: default
 ---
-<form action="/search.html" method="get">
-  <label for="search-box">Search</label>
-  <input type="text" id="search-box" name="query">
-  <input type="submit" value="search">
-</form>
+<ul class="base-layout">
+  <li>
+    <h1 id="page-label">Search Results</h1>
+  </li>
+  <form action="/search.html" method="get">
+    <label for="search-box">Search</label>
+    <input type="text" id="search-box" name="query">
+    <input type="submit" value="search">
+  </form>
 
-<ul id="search-results"></ul>
-
+  <ul id="search-results"></ul>
+</ul>
 <script>
 window.store = {
     {% for post in site.posts %}
