@@ -47,6 +47,8 @@ $leftWidth: 220px;
 .theme-switch-wrapper {
   display: flex;
   align-items: center;
+  padding-left: 10px;
+  padding-top: 10px;
 
   em {
     margin-left: 10px;
@@ -59,6 +61,7 @@ $leftWidth: 220px;
   height: 34px;
   position: relative;
   width: 60px;
+
 }
 
 .theme-switch input {
