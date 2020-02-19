@@ -2,10 +2,6 @@
     function displaySearchResults(results, store) {
         var searchResults = document.getElementById('search-results');
 
-        // if (Object.keys(store).length == 0) {
-        //     window.location.replace("/blog");
-        // }
-
         if (results.length) {
             var appendString = '';
 
@@ -14,7 +10,7 @@
                 appendString += '<a href="' + item.url + '"><h3>' + item.title + '</h3><h3>' + item.category + '</h3></a>';
                 // appendString += '<p>' + item.content.substring(0, 150) + '...</p></li>';
             }
-            
+
             searchResults.innerHTML = appendString;
         } else {
             searchResults.innerHTML = '<li>No results found</li>';
@@ -35,6 +31,10 @@
     }
   
     var searchTerm = getQueryVariable('query');
+
+    if (searchTerm == "") {
+        window.location.replace("/blog");
+    }
 
     if (searchTerm) {
         document.getElementById('search-box').setAttribute("value", searchTerm);
