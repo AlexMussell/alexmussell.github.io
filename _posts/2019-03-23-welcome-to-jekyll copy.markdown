@@ -3,6 +3,7 @@ layout: post
 title:  "test-1"
 date:   2019-03-23 21:03:36 +0530
 category: Python
+excerpt: test-1
 ---
 test-1
 

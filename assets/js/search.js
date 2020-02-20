@@ -10,6 +10,7 @@
    
                 let post = document.createElement('li');
 
+                // link
                 let titleLink = document.createElement('a');  
                 titleLink.classList.add("post-link");
                 titleLink.href = item.url
@@ -46,12 +47,18 @@
 
                 date.appendChild(dateIcon);
 
-                // append
+                // append to category date container
                 categoryDateContainer.appendChild(categories);
                 categoryDateContainer.appendChild(date);
 
+                // excerpt
+                let excerpt = document.createElement('div');
+                excerpt.classList.add('post');
+                excerpt.textContent = item.excerpt;
+
 
                 post.appendChild(categoryDateContainer);
+                post.appendChild(excerpt);
 
                 fragment.appendChild(post);
             }
@@ -89,9 +96,10 @@
             this.field('title', { boost: 10 });
             this.field('category');
             this.field('date');
+            this.field('excerpt');
 
             for (let key in window.store) {
-                this.add({ 'id': key, 'title': window.store[key].title, 'category': window.store[key].category, 'date': window.store[key].date })
+                this.add({ 'id': key, 'title': window.store[key].title, 'category': window.store[key].category, 'date': window.store[key].date, 'excerpt': window.store[key].excerpt })
             }
         });
 

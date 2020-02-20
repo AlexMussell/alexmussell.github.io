@@ -3,8 +3,9 @@ layout: post
 title:  "test-2"
 date:   2019-03-23 21:03:36 +0530
 category: Python
+excerpt: test-2
 ---
-test-2
+
 
 ```python
 for x in range(10):

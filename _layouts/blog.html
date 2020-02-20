@@ -17,7 +17,6 @@ layout: default
   <div class="post-content-container">
     {% assign filename = "/search.html" %}
     <form action="{{ site.baseurl | append: filename }}" method="get">
-      <label for="search-box">Search</label>
       <input type="text" id="search-box" name="query">
       <input type="submit" value="search">
     </form>
