@@ -2,11 +2,11 @@
 layout: default
 ---
 {%- assign date_format = site.plainwhite.date_format | default: "%b %-d, %Y" -%}
-<!-- <ul class="base-layout"> -->
+<ul class="base-layout">
   <li>
     <h1 id="page-label">Search Results</h1>
   </li>
-  <div class="post-content-container">
+  <!-- <div class="post-content-container"> -->
 
     <form action="/search.html" method="get">
       <label for="search-box">Search</label>
@@ -15,8 +15,8 @@ layout: default
     </form>
 
     <ul id="search-results"></ul>
-  </div>
-<!-- </ul> -->
+  <!-- </div> -->
+</ul>
 
 
 <script>
