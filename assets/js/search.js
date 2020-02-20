@@ -3,11 +3,10 @@
         let searchResults = document.getElementById('search-results');
 
         if (results.length) {
-            // var appendString = '';
             let fragment = document.createDocumentFragment();
 
-            for (var i = 0; i < results.length; i++) {
-                var item = store[results[i].ref];
+            for (let i = 0; i < results.length; i++) {
+                let item = store[results[i].ref];
    
                 let post = document.createElement('li');
 
@@ -64,11 +63,11 @@
     }
   
     function getQueryVariable(variable) {
-        var query = window.location.search.substring(1);
-        var vars = query.split('&');XMLHttpRequestEventTarget
+        let query = window.location.search.substring(1);
+        let vars = query.split('&');XMLHttpRequestEventTarget
 
-        for (var i = 0; i < vars.length; i++) {
-            var pair = vars[i].split('=');
+        for (let i = 0; i < vars.length; i++) {
+            let pair = vars[i].split('=');
 
             if (pair[0] === variable) {
                 return decodeURIComponent(pair[1].replace(/\+/g, '%20'));
@@ -76,7 +75,7 @@
         }
     }
   
-    var searchTerm = getQueryVariable('query');
+    let searchTerm = getQueryVariable('query');
 
     if (searchTerm == "") {
         window.location.replace("/blog");
@@ -85,18 +84,18 @@
     if (searchTerm) {
         document.getElementById('search-box').setAttribute("value", searchTerm);
 
-        var idx = lunr(function () {
+        let idx = lunr(function () {
             this.field('id');
             this.field('title', { boost: 10 });
             this.field('category');
             this.field('date');
 
-            for (var key in window.store) {
+            for (let key in window.store) {
                 this.add({ 'id': key, 'title': window.store[key].title, 'category': window.store[key].category, 'date': window.store[key].date })
             }
         });
 
-        var results = idx.search(searchTerm);
+        let results = idx.search(searchTerm);
         displaySearchResults(results, window.store);
 
     }
