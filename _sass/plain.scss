@@ -252,6 +252,10 @@ main {
   margin-right:auto;
 }
 
+#search-results{
+  list-style-type: none;
+}
+
 .post-wrapper {
   border-bottom: 1px solid var(--border-bottom);
   margin-bottom: 1rem;

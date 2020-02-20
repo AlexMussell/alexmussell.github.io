@@ -1,70 +1,62 @@
 (function() {
     function displaySearchResults(results, store) {
-        var searchResults = document.getElementById('search-results');
-
-        console.log(store);
+        let searchResults = document.getElementById('search-results');
 
         if (results.length) {
             // var appendString = '';
-            var fragment = document.createDocumentFragment();
+            let fragment = document.createDocumentFragment();
 
             for (var i = 0; i < results.length; i++) {
                 var item = store[results[i].ref];
-                // appendString += '<a href="' + item.url + '"><h3>' + item.title + '</h3><h3>' + item.category + '</h3></a>';
-                // appendString += '<p>' + item.content.substring(0, 150) + '...</p></li>';
-                
-                post = document.createElement('li');
+   
+                let post = document.createElement('li');
 
-                titleLink = document.createElement('a');  
+                let titleLink = document.createElement('a');  
                 titleLink.classList.add("post-link");
                 titleLink.href = item.url
 
-                title = document.createElement('h2');
+                let title = document.createElement('h2');
                 title.classList.add("post-title");
                 title.textContent = item.title
 
                 titleLink.appendChild(title)
                 post.appendChild(titleLink);
 
-                categoryDateContainer = document.createElement('div');
+                // category container
+                let categoryDateContainer = document.createElement('div');
                 categoryDateContainer.classList.add('post-meta');
 
-                categories = document.createElement('ul');
+                // category
+                let categories = document.createElement('ul');
                 categories.classList.add('post-categories');
 
-                categoryList = document.createElement('li');
+                let categoryList = document.createElement('li');
                 categoryList.textContent = item.category;
 
                 categories.appendChild(categoryList);
-                categoryDateContainer.appendChild(categories);
 
-                date = document.createElement('div');
+                // date
+                let date = document.createElement('div');
+                date.setAttribute('id', 'date-order');
                 date.classList.add('post-date');
 
                 date.textContent = item.date;
 
-                dateIcon = document.createElement('i');
+                let dateIcon = document.createElement('i');
                 dateIcon.classList.add('icon-calendar');
-
 
                 date.appendChild(dateIcon);
 
-
-
+                // append
+                categoryDateContainer.appendChild(categories);
                 categoryDateContainer.appendChild(date);
-
-
-                
-
 
 
                 post.appendChild(categoryDateContainer);
 
-
                 fragment.appendChild(post);
             }
 
-            //searchResults.innerHTML = appendString;
             searchResults.appendChild(fragment);
         } else {
             searchResults.innerHTML = '<li>No results found</li>';
