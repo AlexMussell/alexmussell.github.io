@@ -15,11 +15,13 @@ layout: default
   </li>
 
   <div class="post-content-container">
-    {% assign filename = "/search.html" %}
-    <form action="{{ site.baseurl | append: filename }}" method="get">
-      <input type="text" id="search-box" name="query">
-      <input type="submit" value="search">
-    </form>
+    <div class="search-form">
+      {% assign filename = "/search.html" %}
+      <form action="{{ site.baseurl | append: filename }}" method="get" class="search">
+        <input type="text" id="search-box" name="query" placeholder="Search here...">
+        <button type="submit">Search</button>
+      </form>
+    </div>
 
       {%- for post in site.posts -%}
         <li>
