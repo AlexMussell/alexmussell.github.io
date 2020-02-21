@@ -8,10 +8,6 @@ layout: default
   </li>
 <div class="search-container">
   {% assign filename = "/search.html" %}
-  <!-- <form action="{{ site.baseurl | append: filename }}" method="get" class="searchBox">
-    <input type="text" id="search-box" name="query" class="searchInput">
-    <input type="submit" value="search" class="searchButton">
-  </form> -->
   <form action="{{ site.baseurl | append: filename }}" method="get">
     <input type="text" id="search-box" name="query">
     <input type="submit" value="search">

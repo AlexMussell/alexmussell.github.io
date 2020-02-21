@@ -6,9 +6,17 @@ title: Page Not Found
 <head>
 	{%- include head.html -%}
 	<style>
+	:root{
+		--primary-colour: #ddd;
+		--secondary-colour: #110f0f;
+	}
+	[data-theme="light"] {
+		--primary-colour: #110f0f;
+		--secondary-colour: #ddd;
+	}
 	h2 {
 		font-feature-settings: "lnum";
-		background-color: #ddd;
+		background-color: var(--primary-colour);
 		width: 140px;
 		height: 140px;
 		border-radius: 100%;
@@ -24,7 +32,7 @@ title: Page Not Found
 		font-size: 20px;
 		height: 80vh;
 	}
-	p {text-align: center; line-height: 2em;}
+	p {text-align: center; line-height: 2em; color: var(--primary-colour);}
 	</style>
 </head>
 <body>

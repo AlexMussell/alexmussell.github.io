@@ -1,9 +1,9 @@
 (function() {
     function displaySearchResults(results, store) {
         let searchResults = document.getElementById('search-results');
-
+        let fragment = document.createDocumentFragment();
+        
         if (results.length) {
-            let fragment = document.createDocumentFragment();
 
             for (let i = 0; i < results.length; i++) {
                 let item = store[results[i].ref];
@@ -65,7 +65,13 @@
 
             searchResults.appendChild(fragment);
         } else {
-            searchResults.innerHTML = '<li>No results found</li>';
+            let noResult = document.createElement('p');
+            noResult.classList.add('searchNotFound');
+            noResult.textContent = 'No results found.';
+
+            fragment.appendChild(noResult);
+
+            searchResults.appendChild(fragment);
         }
     }
   

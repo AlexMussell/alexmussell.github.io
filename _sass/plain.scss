@@ -512,3 +512,12 @@ color : #2f3640;
   padding: 0 6px;
 }
 }
+
+// search not found
+.searchNotFound {
+  color: var(--page-text);
+  position: absolute;
+  top: 40%;
+  left: 55%;
+  font-size: large;
+}
