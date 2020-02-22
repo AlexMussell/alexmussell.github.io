@@ -87,7 +87,7 @@
                 }
         }
     }
-  
+   
     let searchTerm = getQueryVariable('query');
 
     if (searchTerm == "") {

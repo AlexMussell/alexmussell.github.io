@@ -2,7 +2,7 @@
 @import "ext/normalize";
 @import "syntax";
 
-$linkColor: #0a59b0;
+$linkColor: var(--link-colour);
 $mobileW: 768px;
 $smallMobileW: 480px;
 $bigScreenW: 1600px;
@@ -27,6 +27,7 @@ $leftWidth: 220px;
   --secondary-colour: rgb(175, 175, 175);
   --code-highlight: #222222;
   --post-category: #fff;
+  --link-colour: #ffffff;
 }
 
 [data-theme="light"] {
@@ -41,10 +42,12 @@ $leftWidth: 220px;
   --secondary-colour: #777;
   --code-highlight: #f4f4f4;
   --post-category: #000;
+  --link-colour: #aaa;
 }
 
 // Dark mode button
 .theme-switch-wrapper {
+  position: fixed;
   display: flex;
   align-items: center;
   padding-left: 10px;
@@ -455,64 +458,6 @@ main {
   flex: 1 1 0px;
 }
 
-
-//search
-.searchBox {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform:  translate(-50%,50%);
-  background: #2f3640;
-  height: 40px;
-  border-radius: 40px;
-  padding: 10px;
-
-}
-
-.searchBox:hover > .searchInput {
-  width: 240px;
-  padding: 0 6px;
-}
-
-.searchBox:hover > .searchButton {
-background: white;
-color : #2f3640;
-}
-
-.searchButton {
-  color: white;
-  float: right;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: #2f3640;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: 0.4s;
-}
-
-.searchInput {
-  border:none;
-  background: none;
-  outline:none;
-  float:left;
-  padding: 0;
-  color: white;
-  font-size: 16px;
-  transition: 0.4s;
-  line-height: 40px;
-  width: 0px;
-
-}
-
-@media screen and (max-width: 620px) {
-.searchBox:hover > .searchInput {
-  width: 150px;
-  padding: 0 6px;
-}
-}
-
 // search not found
 .searchNotFound {
   color: var(--page-text);
@@ -520,4 +465,52 @@ color : #2f3640;
   top: 40%;
   left: 55%;
   font-size: large;
+}
+
+.search {
+  width: 500px;
+  height: 40px;
+  margin: 30px auto;
+  background: #444;
+  background: rgba(0,0,0,.2);
+  border-radius:  3px;
+  border: 1px solid var(--secondary-colour);
+  
+  input {
+    width: 370px;
+    padding: 10px 5px;
+    float: left;
+    color: #ccc;
+    border: 0;
+    background: transparent;
+    border-radius: 3px 0 0 3px;
+    &:focus {
+      outline: 0;
+      background:transparent;
+    }
+  }
+  
+  button {
+    position: relative;
+    float: right;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    height: 40px;
+    width: 120px;
+    color: var(--secondary-colour);
+    background: transparent;
+    border-left: 1px solid var(--secondary-colour);
+    border-radius: 0 3px 3px 0;
+    &:hover {
+      background: var(--secondary-colour);
+      color:#444;
+    }
+    &:active {
+      box-shadow: 0px 0px 12px 0px rgba(225, 225, 225, 1);
+    }
+    &:focus {
+      outline: 0;
+    }
+  }  
 }
