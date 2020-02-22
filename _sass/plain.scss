@@ -2,7 +2,7 @@
 @import "ext/normalize";
 @import "syntax";
 
-$linkColor: #0a59b0;
+$linkColor: var(--link-colour);
 $mobileW: 768px;
 $smallMobileW: 480px;
 $bigScreenW: 1600px;
@@ -27,6 +27,7 @@ $leftWidth: 220px;
   --secondary-colour: rgb(175, 175, 175);
   --code-highlight: #222222;
   --post-category: #fff;
+  --link-colour: #ffffff;
 }
 
 [data-theme="light"] {
@@ -41,10 +42,12 @@ $leftWidth: 220px;
   --secondary-colour: #777;
   --code-highlight: #f4f4f4;
   --post-category: #000;
+  --link-colour: #aaa;
 }
 
 // Dark mode button
 .theme-switch-wrapper {
+  position: fixed;
   display: flex;
   align-items: center;
   padding-left: 10px;
@@ -453,63 +456,6 @@ main {
 
 .job-description{ 
   flex: 1 1 0px;
-}
-
-
-//search
-.searchBox {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform:  translate(-50%,50%);
-  background: #2f3640;
-  height: 40px;
-  border-radius: 50px;
-  padding: 10px;
-}
-
-.searchBox:hover > .searchInput {
-  width: 240px;
-  padding: 0 6px;
-}
-
-.searchBox:hover > .searchButton {
-background: white;
-color : #2f3640;
-}
-
-.searchButton {
-  color: white;
-  float: right;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: #2f3640;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: 0.4s;
-}
-
-.searchInput {
-  border:none;
-  background: none;
-  outline:none;
-  float:left;
-  padding: 0;
-  color: white;
-  font-size: 16px;
-  transition: 0.4s;
-  line-height: 40px;
-  width: 0px;
-  border-radius: 30px;
-}
-
-@media screen and (max-width: 620px) {
-.searchBox:hover > .searchInput {
-  width: 150px;
-  padding: 0 6px;
-}
 }
 
 // search not found
