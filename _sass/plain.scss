@@ -469,6 +469,7 @@ main {
 
 // search bar
 .search {
+  display: flex;
   width: 500px;
   @media screen and (max-width: $smallMobileW) {
     width: 300px;
@@ -478,7 +479,6 @@ main {
   }
   height: 40px;
   margin: 30px auto;
-  background: #444;
   background: rgba(0,0,0,.2);
   border-radius:  3px;
   border: 1px solid var(--secondary-colour);
@@ -488,6 +488,7 @@ main {
   input {
     width: 370px;
     padding: 10px 5px;
+    // position: relative;
     float: left;
     color: #ccc;
     border: 0;
@@ -506,7 +507,7 @@ main {
     cursor: pointer;
     height: 40px;
     width: 120px;
-
+    // added
     @media screen and (max-width: $mobileW) {
       width: 60px;
     }
