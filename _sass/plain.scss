@@ -470,12 +470,20 @@ main {
 // search bar
 .search {
   width: 500px;
+  @media screen and (max-width: $smallMobileW) {
+    width: 300px;
+  }
+  @media screen and (max-width: $mobileW) {
+    width: 300px;
+  }
   height: 40px;
   margin: 30px auto;
   background: #444;
   background: rgba(0,0,0,.2);
   border-radius:  3px;
   border: 1px solid var(--secondary-colour);
+  position: relative;
+  resize: both;
   
   input {
     width: 370px;
@@ -492,13 +500,17 @@ main {
   }
   
   button {
-    position: relative;
     float: right;
     border: 0;
     padding: 0;
     cursor: pointer;
     height: 40px;
     width: 120px;
+
+    @media screen and (max-width: $mobileW) {
+      width: 60px;
+    }
+
     color: var(--secondary-colour);
     background: transparent;
     border-left: 1px solid var(--secondary-colour);
