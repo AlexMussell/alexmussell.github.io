@@ -472,7 +472,7 @@ main {
   display: flex;
   width: 500px;
   @media screen and (max-width: $smallMobileW) {
-    width: 300px;
+    width: 200px;
   }
   @media screen and (max-width: $mobileW) {
     width: 300px;
@@ -488,7 +488,6 @@ main {
   input {
     width: 370px;
     padding: 10px 5px;
-    // position: relative;
     float: left;
     color: #ccc;
     border: 0;
@@ -507,11 +506,6 @@ main {
     cursor: pointer;
     height: 40px;
     width: 120px;
-    // added
-    @media screen and (max-width: $mobileW) {
-      width: 60px;
-    }
-
     color: var(--secondary-colour);
     background: transparent;
     border-left: 1px solid var(--secondary-colour);
