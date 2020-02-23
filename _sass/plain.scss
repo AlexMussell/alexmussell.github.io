@@ -473,11 +473,13 @@ main {
 .search {
   display: flex;
   width: 500px;
+
   @media screen and (max-width: $smallMobileW) {
     width: 200px;
   }
   @media screen and (max-width: $mobileW) {
     width: 300px;
+    border-radius: 25px;
   }
   height: 40px;
   margin: 30px auto;
@@ -507,7 +509,7 @@ main {
     padding: 0;
     cursor: pointer;
     height: 40px;
-    width: 120px;
+    width: 130px;
     color: var(--secondary-colour);
     background: transparent;
     border-left: 1px solid var(--secondary-colour);
