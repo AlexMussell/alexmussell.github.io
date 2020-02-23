@@ -29,6 +29,7 @@ $leftWidth: 220px;
   --post-category: #fff;
   --link-colour: #ffffff;
   --slider-colour: #ffffff;
+  --search-text-colour: rgb(68, 68, 68, .2);
 }
 
 [data-theme="light"] {
@@ -45,6 +46,7 @@ $leftWidth: 220px;
   --post-category: #000;
   --link-colour: #aaa;
   --slider-colour: #222222;
+  --search-hover-colour: rgb(156, 156, 156);
 }
 
 // Dark mode button
@@ -491,7 +493,7 @@ main {
   
   input {
     width: 370px;
-    padding-left: 15px;
+    padding-left: 20px;
     float: left;
     color: var(--secondary-colour);
     border: 0;
@@ -504,11 +506,14 @@ main {
   }
   
   button {
+    -moz-transition: all .2s ease-in;
+    -o-transition: all .2s ease-in;
+    -webkit-transition: all .2s ease-in;
+    transition: all .2s ease-in;
     float: right;
     border: 0;
     padding: 0;
     cursor: pointer;
-    height: 40px;
     width: 130px;
     color: var(--secondary-colour);
     background: transparent;
@@ -516,8 +521,8 @@ main {
     border-top-right-radius: 1.2em;
     border-bottom-right-radius: 1.2em;
     &:hover {
-      background: var(--secondary-colour);
-      color:#444;
+      background: var(--category-box);
+      color: var(--secondary-colour);
     }
     &:active {
       box-shadow: 0px 0px 12px 0px rgba(225, 225, 225, 1);
