@@ -28,6 +28,7 @@ $leftWidth: 220px;
   --code-highlight: #222222;
   --post-category: #fff;
   --link-colour: #ffffff;
+  --slider-colour: #ffffff;
 }
 
 [data-theme="light"] {
@@ -43,6 +44,7 @@ $leftWidth: 220px;
   --code-highlight: #f4f4f4;
   --post-category: #000;
   --link-colour: #aaa;
+  --slider-colour: #222222;
 }
 
 // Dark mode button
@@ -94,7 +96,7 @@ $leftWidth: 220px;
 }
 
 input:checked + .slider {
-  background-color: #66bb6a;
+  background-color: var(--slider-colour);
 }
 
 input:checked + .slider:before {
@@ -479,7 +481,7 @@ main {
   }
   height: 40px;
   margin: 30px auto;
-  background: rgba(0,0,0,.2);
+  background: var(--background-colour),.2;
   border-radius:  3px;
   border: 1px solid var(--secondary-colour);
   position: relative;
@@ -489,7 +491,7 @@ main {
     width: 370px;
     padding: 10px 5px;
     float: left;
-    color: #ccc;
+    color: var(--secondary-colour);
     border: 0;
     background: transparent;
     border-radius: 3px 0 0 3px;
