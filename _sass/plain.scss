@@ -484,14 +484,14 @@ main {
   height: 40px;
   margin: 30px auto;
   background: var(--background-colour),.2;
-  border-radius:  3px;
+  border-radius:  1.2em;
   border: 1px solid var(--secondary-colour);
   position: relative;
   resize: both;
   
   input {
     width: 370px;
-    padding: 10px 5px;
+    padding-left: 15px;
     float: left;
     color: var(--secondary-colour);
     border: 0;
@@ -513,7 +513,8 @@ main {
     color: var(--secondary-colour);
     background: transparent;
     border-left: 1px solid var(--secondary-colour);
-    border-radius: 0 3px 3px 0;
+    border-top-right-radius: 1.2em;
+    border-bottom-right-radius: 1.2em;
     &:hover {
       background: var(--secondary-colour);
       color:#444;
