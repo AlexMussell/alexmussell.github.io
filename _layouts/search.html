@@ -24,7 +24,7 @@ window.store = {
     {% for post in site.posts %}
         "{{ post.url | slugify }}": {
         "title": "{{ post.title | xml_escape }}",
-        "categories": "{{ post.categories | xml_escape }}",
+        "categories": "{{ post.categories }}",
         "url": "{{ post.url | xml_escape }}",
         "date": "{{ post.date | date: date_format }}",
         "excerpt": "{{ post.excerpt | xml_escape }}"
