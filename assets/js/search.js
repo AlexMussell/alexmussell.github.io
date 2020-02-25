@@ -31,7 +31,7 @@
                 categories.classList.add('post-categories');
 
                 let categoryList = document.createElement('li');
-                categoryList.textContent = item.category;
+                categoryList.textContent = item.categories;
 
                 categories.appendChild(categoryList);
 
@@ -100,12 +100,12 @@
         let idx = lunr(function () {
             this.field('id');
             this.field('title', { boost: 10 });
-            this.field('category');
+            this.field('categories');
             this.field('date');
             this.field('excerpt');
 
             for (let key in window.store) {
-                this.add({ 'id': key, 'title': window.store[key].title, 'category': window.store[key].category, 'date': window.store[key].date, 'excerpt': window.store[key].excerpt })
+                this.add({ 'id': key, 'title': window.store[key].title, 'categories': window.store[key].categories, 'date': window.store[key].date, 'excerpt': window.store[key].excerpt })
             }
         });
 

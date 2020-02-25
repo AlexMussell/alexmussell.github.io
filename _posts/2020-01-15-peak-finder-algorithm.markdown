@@ -1,12 +1,13 @@
 ---
+layout: post
 title: 1D and 2D Peak Finding Algorithms
 date: 2020-02-25 19:30:00 +0000
-category: Python Algorithms
-excerpt: Today we will be discussing the novel peak finding algorithms and implementing them in Python
+categories: Python Algorithms
+excerpt: Today we will be discussing the novel peak finding algorithms and implementing them in Python.
 ---
 
 
-#### One-dimensional version
+### One-dimensional Peak Finding
 A one-dimensional peak finder runs over an array:
 
 | a 	| b 	| c 	| d 	| e 	| f 	| g 	| h 	| i 	|
@@ -28,7 +29,7 @@ Firstly we have a straight forward linear search, which in the worst case you ha
 The complexity of this algorithm is worst `O(log2 n)`, best case is `O(1)`!. 
 
 
-#### 2D version
+### Two-Dimensional Peak Finding
 Let step if up a bit and find A singular peak within a 2D array.
 |   	|   	|   	|   	|
 |---	|---	|---	|---	|
