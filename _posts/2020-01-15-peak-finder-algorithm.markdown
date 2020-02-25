@@ -7,11 +7,11 @@ excerpt: Today we will be discussing the novel peak finding algorithms and imple
 ---
 
 
-### One-dimensional Peak Finding
+### One-dimensional Peak Finding:
 A one-dimensional peak finder runs over an array:
 
-| a 	| b 	| c 	| d 	| e 	| f 	| g 	| h 	| i 	|
-|---	|---	|---	|---	|---	|---	|---	|---	|---	|
+| a | b | c | d | e | f | g | h | i |
+|---|---|---|---|---|---|---|---|---|
 
 `a-i` are integers and we want to find A (singular) peak.
 - Peak: Position `b` of the array is a peak if and only if `b >= a` and `b >= c`.
@@ -29,7 +29,8 @@ Firstly we have a straight forward linear search, which in the worst case you ha
 The complexity of this algorithm is worst `O(log2 n)`, best case is `O(1)`!. 
 
 
-### Two-Dimensional Peak Finding
+
+### Two-Dimensional Peak Finding:
 Let step if up a bit and find A singular peak within a 2D array.
 |   	|   	|   	|   	|
 |---	|---	|---	|---	|
