@@ -5,9 +5,11 @@ date: 2020-02-25 19:30:00 +0000
 categories: Python Algorithms
 excerpt: Today we will be discussing the novel peak finding algorithms and implementing them in Python.
 ---
+Today we will be discussing the novel peak finding algorithms and implementing them in Python.
 
+<br>
 
-### One-dimensional Peak Finding:
+## One-dimensional Peak Finding:
 A one-dimensional peak finder runs over an array:
 
                     | a | b | c | d | e | f | g | h | i |
@@ -27,9 +29,9 @@ Firstly we have a straight forward linear search, which in the worst case you ha
 
 The complexity of this algorithm is worst `O(log2 n)`, best case is `O(1)`!. 
 
+<br>
 
-
-### Two-Dimensional Peak Finding:
+## Two-Dimensional Peak Finding:
 Let step if up a bit and find A singular peak within a 2D array.
 
                     |   	|   	|   	|   	|
@@ -80,7 +82,7 @@ def one_dimensional_peak(array):
             return array[mid]
 ```
 
-Remember me saying that we can solve this recursivley? We can! But, as Python does not implement *tail recusion*, it is actually computationally faster to implement it as shown.
+Remember me saying that we can solve this recursivley? We can! But, as Python does not implement [*tail recursion*](https://stackoverflow.com/questions/33923/what-is-tail-recursion), it is actually computationally faster to implement it as shown.
 
 
 Now lets implement a 2D Peak Finder, and lets assume that the 2D array is non-jagged.
