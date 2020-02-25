@@ -7,7 +7,6 @@ excerpt: Today we will be discussing the novel peak finding algorithms and imple
 ---
 Today we will be discussing the novel peak finding algorithms and implementing them in Python.
 
-<br>
 
 ## One-dimensional Peak Finding:
 A one-dimensional peak finder runs over an array:
