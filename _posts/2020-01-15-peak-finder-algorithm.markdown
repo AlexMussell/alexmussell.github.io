@@ -12,7 +12,7 @@ Today we will be discussing the novel peak finding algorithms and implementing t
 ## One-dimensional Peak Finding:
 A one-dimensional peak finder runs over an array:
 
-                    | a | b | c | d | e | f | g | h | i |
+                                | a | b | c | d | e | f | g | h | i |
 
 `a-i` are integers and we want to find A (singular) peak.
 - Peak: Position `b` of the array is a peak if and only if `b >= a` and `b >= c`.
@@ -34,20 +34,20 @@ The complexity of this algorithm is worst `O(log2 n)`, best case is `O(1)`!.
 ## Two-Dimensional Peak Finding:
 Let step if up a bit and find A singular peak within a 2D array.
 
-                    |   	|   	|   	|   	|
-                    |   	| b 	|   	|   	|
-                    | d 	| a 	| e 	|   	|
-                    |   	| c 	|   	|   	|
+                                |   	|   	|   	|   	|
+                                |   	| b 	|   	|   	|
+                                | d 	| a 	| e 	|   	|
+                                |   	| c 	|   	|   	|
 
 a is a peak in the 2D array iff (if and only if) `a >= b `, `a >= d `, `a >= e `, `a >= c `.
 
 Like before, there are 2 ways we will discuss in solving this problem. Firstly we will use the Greedy Ascent algorithm. In this we pick place to start, look in direction, if that number is greater than ours, then we move.
 
-                    |    	|    	|    	|    	|
-                    | 1   	| 2   	| 3   	| 4   	|
-                    | 14 	| 13 	| 12 	| 11 	|
-                    | 15 	| 9  	| 10 	| 8  	|
-                    | 16 	| 17 	| 18 	| 19 	|
+                                |    	|    	|    	|    	|
+                                | 1   	| 2   	| 3   	| 4   	|
+                                | 14 	| 13 	| 12 	| 11 	|
+                                | 15 	| 9  	| 10 	| 8  	|
+                                | 16 	| 17 	| 18 	| 19 	|
 
 Say we pick 12 and want to look left: 12, 13, 14, hit an edge so we look down, 15, hit edge so we look right, 17, 18, 19.
 
