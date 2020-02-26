@@ -30,10 +30,14 @@
                 let categories = document.createElement('ul');
                 categories.classList.add('post-categories');
 
-                let categoryList = document.createElement('li');
-                categoryList.textContent = item.categories;
+                for (let category of item.categories.split(/(?=[A-Z])/)) {
+                    let categoryList = document.createElement('li');
+                    categoryList.textContent = category;
 
-                categories.appendChild(categoryList);
+                    categories.appendChild(categoryList);
+                    categoryDateContainer.appendChild(categories);
+                }
+
 
                 // date
                 let date = document.createElement('div');
@@ -48,7 +52,7 @@
                 date.appendChild(dateIcon);
 
                 // append to category date container
-                categoryDateContainer.appendChild(categories);
+                // categoryDateContainer.appendChild(categories);
                 categoryDateContainer.appendChild(date);
 
                 // excerpt
@@ -111,7 +115,6 @@
 
         let results = idx.search(searchTerm);
         displaySearchResults(results, window.store);
-
     }
 })();
   
