@@ -472,9 +472,8 @@ main {
 // search not found
 .searchNotFound {
   color: var(--page-text);
-  position: absolute;
-  top: 40%;
-  left: 55%;
+  text-align: center;
+  line-height: 100px;
   font-size: large;
 }
 

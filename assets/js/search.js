@@ -71,7 +71,7 @@
         } else {
             let noResult = document.createElement('p');
             noResult.classList.add('searchNotFound');
-            noResult.textContent = 'No results found.';
+            noResult.textContent = 'No results found! :(';
 
             fragment.appendChild(noResult);
 
