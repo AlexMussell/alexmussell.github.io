@@ -13,13 +13,13 @@
                 // link
                 let titleLink = document.createElement('a');  
                 titleLink.classList.add("post-link");
-                titleLink.href = item.url
+                titleLink.href = item.url;
 
                 let title = document.createElement('h2');
                 title.classList.add("post-title");
-                title.textContent = item.title
+                title.textContent = item.title;
 
-                titleLink.appendChild(title)
+                titleLink.appendChild(title);
                 post.appendChild(titleLink);
 
                 // category container
@@ -81,7 +81,7 @@
   
     function getQueryVariable(variable) {
         let query = window.location.search.substring(1);
-        let vars = query.split('&');XMLHttpRequestEventTarget
+        let vars = query.split('&');XMLHttpRequestEventTarget;
 
         for (let i = 0; i < vars.length; i++) {
             let pair = vars[i].split('=');
