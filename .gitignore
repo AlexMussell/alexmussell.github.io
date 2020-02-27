@@ -62,3 +62,5 @@ _site/
 sitemap.xml
 plainwhite.gemspec
 node_modules
+
+Gemfile.lock
