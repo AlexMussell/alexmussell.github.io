@@ -88,7 +88,7 @@ For this example, what these are doing aren't important. But quickly, LineItem c
 
 Now customers have started complaining that there are no promotional offers. How would we implement this? Lets apply the intuition of the toy example above. We want to be able to add and take away promotions as we please, and we want to be able to automatically apply promotions to customer orders. We also need to consider that people will want to automatically have the best promotion applied to the orders without having to ask for it.
 
-So lets break this down: we need a list of promotions, some promotions, and a function that applies the best promotion. Can you where a decorator can be implemented?
+So lets break this down: we need a list of promotions, some promotions, and a function that applies the best promotion. Can you tell where a decorator can be implemented?
 
 ```python
 promos = []
