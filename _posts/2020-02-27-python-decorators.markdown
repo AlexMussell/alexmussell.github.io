@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Pythons Decorators
+title: Python Decorators
 date: 2020-02-25 19:30:00 +0000
 categories: Python Decorators
 excerpt: In today's topic we will be discussing the basics Python decorators. They aren't as scary as you think!
