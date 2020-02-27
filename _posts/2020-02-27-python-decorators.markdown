@@ -129,7 +129,7 @@ One issue we would discover late on if we didn't use a decorator is future devel
 We can now update our Order code to use our promotions!
 
 ```python
-class Order:  # the Context
+class Order:
 
     def __init__(self, customer, cart, promotion=None):
         self.customer = customer
