@@ -2,10 +2,10 @@
 layout: post
 title: Python Decorators
 date: 2020-02-25 19:30:00 +0000
-categories: Python Decorators
+categories: Python Decorators Basics
 excerpt: In today's topic we will be discussing the basics Python decorators. They aren't as scary as you think!
 ---
-In today's topic we will be discussing Python decorators. They aren't as scary as you think!
+In today's topic we will be discussing teh basics of Python decorators. They aren't as scary as you think!
 
 We will go through what they are, how they work, a toy example, and a more practical example.
 
@@ -84,7 +84,7 @@ class Order:
         return fmt.format(self.total(), self.due())
 ```
 
-For this example, what these are doing aren't important. But quickly, LineItem contains information about an item in the shop, and the Order has a list of attributes specifying a person and how to pay etc.
+For this example, what these are doing aren't important. But quickly, `LineItem` contains information about an item in the shop, and the `Order` has a list of attributes specifying a person and how to pay etc.
 
 Now customers have started complaining that there are no promotional offers. How would we implement this? Lets apply the intuition of the toy example above. We want to be able to add and take away promotions as we please, and we want to be able to automatically apply promotions to customer orders. We also need to consider that people will want to automatically have the best promotion applied to the orders without having to ask for it.
 
@@ -124,7 +124,7 @@ def best_promo(order):
     return max(promo(order) for promo in promos)
 ```
 
-One issue we would discover late on if we didn't use a decorator is future developers would have to remember to update the promos list which can easily cause bugs. So we created a decorator that adds all new promotions to the list of decorators.
+One issue we would discover later on if we didn't use a decorator is that future developers would have to remember to update the promos list, which can easily cause bugs. So we created a decorator that adds all new promotions to the list of decorators.
 
 We can now update our Order code to use our promotions!
 
@@ -159,7 +159,7 @@ Now this may seem strange to some, but Python objects are First Order, so functi
 
 So there you go! The basics of decorators! And they aren't that difficult. The hardest thing is knowing when to use them. Just always assume your code is going to have to be extended at some point by somebody you have never met. So try to make their life easier!
 
-Thanks!
+I will be going over more advanced decorator features in the future. But for now, thanks for reading.
 
 
 #### Resources
