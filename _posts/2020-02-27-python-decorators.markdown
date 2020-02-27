@@ -7,7 +7,9 @@ excerpt: In today's topic we will be discussing the basics Python decorators. Th
 ---
 In today's topic we will be discussing Python decorators. They aren't as scary as you think!
 
-We will go through what they are, how they work, and a toy example, and a more practical example.
+We will go through what they are, how they work, a toy example, and a more practical example.
+
+<br>
 
 ## The Theory
 If you come from a Javascript background, the easiest way to understand decorators is by comparing them to callbacks! For all those who don't know what a callback is:
@@ -42,8 +44,10 @@ Now obviously this is a trivial example. However it shows the key features of a 
 
 For clarity, you should write your decorators in separate modules to the functions they are invoked upon. But for the sake of this post, it isn't important.
 
+<br>
+
 ## More Realistic Example
-For this second example, I will be using the example as described in the great resource (Fluent Python)[http://shop.oreilly.com/product/0636920032519.do], as it is a great, semi-practical example!
+For this second example, I will be using the example as described in the great resource [Fluent Python](http://shop.oreilly.com/product/0636920032519.do), as it is a great, semi-practical example!
 
 Lets say we have a shop where people can take make orders and pay. For this we can have 2 classes; an Item class, and and Order class (If you are unsure about classes, I will be doing an OO series at some point).
 
@@ -159,4 +163,4 @@ Thanks!
 
 
 #### Resources
-(Fluent Python)[http://shop.oreilly.com/product/0636920032519.do]
+[Fluent Python](http://shop.oreilly.com/product/0636920032519.do)
