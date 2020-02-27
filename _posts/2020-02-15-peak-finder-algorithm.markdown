@@ -19,7 +19,7 @@ Position 9 is a peak if `i >= h`.
 
 There are a couple of ways we can solve this problem.
 
-Firstly we have a straight forward linear search, which in the worst case you have to look at all elements in `O(n)` time (as we start from the left, and in the worst case senario, we have to go all the way through the array in linear time). However, we can improve on this dramatically by implementing a recursive divide-and-conquer technique. The psuedo code would be like the following:
+Firstly we have a straight forward linear search, which in the worst case you have to look at all elements in `O(n)` time (as we start from the left, and in the worst case scenario, we have to go all the way through the array in linear time). However, we can improve on this dramatically by implementing a recursive divide-and-conquer technique. The psuedo code would be like the following:
 
 
     - If a[n/2] < a[n/2-1] then only look at left half to look for peak.
@@ -50,7 +50,7 @@ Like before, there are 2 ways we will discuss in solving this problem. Firstly w
 
 Say we pick 12 and want to look left: 12, 13, 14, hit an edge so we look down, 15, hit edge so we look right, 17, 18, 19.
 
-The worst case anaylsis for the Greedy Ascent algorithm is `O(nm)` where you have to traverse all nodes in the domain, and if `m=n O(n^2)`.
+The worst case analysis for the Greedy Ascent algorithm is `O(nm)` where you have to traverse all nodes in the domain, and if `m=n O(n^2)`.
 
 Much like the one-dimensional problem, we can also drastically improve the performance by performing a divide-and-conquer technique. The psuedo code for this algorithm is:
 
