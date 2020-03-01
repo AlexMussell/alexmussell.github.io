@@ -46,4 +46,4 @@ The simplest way to think about Docker, is as a container runtime that essential
 <br>
 
 #### In conclusion
-This post describes a one-vs-another between VMs and containers. However, they both go hand in hand, and shouldn't be seen as one being inherently better than another, although they differ in several ways.
+This post describes a one-vs-another between VMs and containers. However, when looking at both, they shouldn't be seen as one being inherently better than another as the solve different architectural issue. In the next post in this series, we will be delving into the architecture of Docker itself, setting up Docker locally, and running an image from DockerHub.
