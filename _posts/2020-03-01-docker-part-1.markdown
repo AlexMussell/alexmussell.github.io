@@ -41,7 +41,7 @@ Firstly, each container shares the host OS kernel, binaries, and libraries. All 
 The simplest way to think about Docker, is as a container runtime that essentially does what a hypervisor does with hardware. But instead of acting as a layer between the hardware and the host, it is a layer between the host and the applications running on that host. It allows for effective resource utilisation, whilst also keeping your applications isolated.
 
 
-![VM and container architecture](../assets/blog_images/vms_containers-2020-03-01.png)
+![VM and container architecture](./assets/blog_images/vms_containers-2020-03-01.png)
 
 <br>
 
