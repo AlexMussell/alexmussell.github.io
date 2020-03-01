@@ -36,9 +36,9 @@ Where VMs virtualise hardware, the purpose of a container is to virtualise softw
 
 This is a great explanation of what a container is and does, but what are its features?
 
-Firstly, each container shares the host OS kernel, binaries, and libraries. All shared components are read-only, meaning they are very lightweight (only MBs, not GBs like VMs) and they are portable. Also, as they share the host OS, it drastically reduces management overhead. Their portability comes from the fact they are not bound by the hosts OS calls, they interact with Docker API. Meaning the only prerequiste to run your containers is to have Docker installed on the host machine. It doesn't matter where or when the container was built.
+Firstly, each container shares the host OS kernel, binaries, and libraries. All shared components are read-only, meaning they are very lightweight (only MBs, not GBs like VMs) and they are portable. Also, as they share the host OS, it drastically reduces management overhead. Their portability comes from the fact they are not bound by the hosts OS calls, they interact with container engine API. Meaning the only prerequiste to run your containers is to have a container engine installed on the host machine. It doesn't matter where or when the container was built.
 
-The simplest way to think about Docker, is as a container runtime that essentially does what a hypervisor does with hardware. But instead of acting as a layer between the hardware and the host, it is a layer between the host and the applications running on that host. It allows for effective resource utilisation, whilst also keeping your applications isolated.
+The simplest way to think about a container engine, is as a container runtime that essentially does what a hypervisor does with hardware. But instead of acting as a layer between the hardware and the host, it is a layer between the host and the applications running on that host. It allows for effective resource utilisation of that host, whilst also keeping your applications isolated.
 
 
 ![VM and container architecture](/assets/blog_images/vms_containers-2020-03-01.png)
@@ -46,4 +46,4 @@ The simplest way to think about Docker, is as a container runtime that essential
 <br>
 
 #### In conclusion
-This post describes a one-vs-another between VMs and containers. However, when looking at both, they shouldn't be seen as one being inherently better than another as the solve different architectural issue. In the next post in this series, we will be delving into the architecture of Docker itself, setting up Docker locally, and running an image from DockerHub.
+This post describes a one-vs-another between VMs and containers. However, when looking at both, they shouldn't be seen as one being inherently better than another as the solve different architectural issues. In the next post in this series, we will be delving into the architecture of Docker itself, setting up Docker locally, and running an image from DockerHub.
