@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Merge Sort
-date: 2020-03-01 19:30:00 +0000
+date: 2020-03-03 19:30:00 +0000
 categories: Python Algorithms
 excerpt: Today we will be discussing merge sort and implementing it in Python.
 ---
