@@ -32,6 +32,7 @@ For all you big-brains out there, yes I know there is in-place merge sort, but w
     6. Switch R' > L'
     7. Then start to merge arrays back together.
 
+<br>
 
 #### Implementation
 ```python
