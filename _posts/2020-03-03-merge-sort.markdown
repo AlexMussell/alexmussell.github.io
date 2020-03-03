@@ -5,7 +5,7 @@ date: 2020-03-03 19:30:00 +0000
 categories: Python Algorithms
 excerpt: Today we will be discussing merge sort and implementing it in Python.
 ---
-Sorting is an important topic within computing, and sorting algorithms need to be understood thoroughly if you are expected to bag an coding interview. Today we will be discussing merge sort and implementing it in Python. 
+Sorting is an important topic within computing, and sorting algorithms need to be understood thoroughly if you are expected to bag yourself a coding interview. Today we will be discussing merge sort and implementing it in Python. 
 
 <br>
 
