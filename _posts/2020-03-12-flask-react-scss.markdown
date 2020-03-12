@@ -66,3 +66,9 @@ Install the required node packages with `npm install application/templates/stati
 * [autoprefixer](https://github.com/postcss/autoprefixer): PostCSS plugin that adds vendor prefixes depending on host browser.
 * [postcss-clean](https://www.npmjs.com/package/postcss-clean): PostCSS plugin CSS minifier that uses [clean-css](https://github.com/jakubpawlowicz/clean-css).
 
+
+## React
+A brief word on the React installation, we have Flask router routing from our webserver to our application landing pages at `index.html`, once the client is at the application, the routing will be handled via [Reacts routing](https://reacttraining.com/react-router/) components. These routes can be found in `application/static/js/routes.js`
+
+
+That's all for today! As I said in the prelude, please submit any issues through Github and I will get round to fixing them. Hopefully this helps you out!
