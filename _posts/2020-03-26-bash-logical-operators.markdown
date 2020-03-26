@@ -49,7 +49,7 @@ existingfile opened
 ```
 <br>
 
-### __&&__:
+### __&&__
 
 and-and, unlike __;__, will only perform the second command if the first command returns a 0 (True) status code.
 
