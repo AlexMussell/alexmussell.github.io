@@ -26,7 +26,7 @@ Today we will be covering 4 logical operators. The operators we will cover are:
 
 <br>
 
-### __;__:
+### __;__
 
 The semi-colon is used in between commands and allows you to string multiple commands together, regardless of status code output.
 
@@ -49,7 +49,7 @@ existingfile opened
 ```
 <br>
 
-### __&&__: 
+### __&&__:
 
 and-and, unlike __;__, will only perform the second command if the first command returns a 0 (True) status code.
 
@@ -72,7 +72,7 @@ cat: /home/default/existingfile.txt: No such file or directory
 
 <br>
 
-###  __||__: 
+###  __||__
 
 As you would expect, pipe-pipe does the inverse of `&&`. If the expression on the left evaluates to a non 0 status code, perform the action on the right.
 
@@ -95,7 +95,7 @@ abcdefghijklmnopqrstuvyxwz
 
 <br>
 
-### __&__: 
+### __&__
 
 This operator bares no resemblemces to `&&` even though you would assume it does. `&` still takes 2 expressions, however it executes the right hand side without waiting for the left hand side to complete. For example:
 
