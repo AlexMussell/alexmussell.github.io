@@ -112,3 +112,26 @@ Finished first
 ```
 
 "Finished first" gets printed immediately and returns its process id.
+
+
+## Practical Example
+
+Lets refactor this basic `if` command which is a deploy script to an environment:
+
+```bash
+if [ "$env" != "development" ] || \
+    [ "$env" != "staging" ] || \
+    [ "$env" != "production" ] ; then
+    deploy $env
+elif
+    error_message
+```
+
+On the face of it, this example seems to be okay. However, taking what we have learnt (plus a few extra tricks which I will discuss briefly), we can use logical operator to make it a simple, elegant one liner.
+
+```bash
+[[ ! $env =~ ^(development|staging|production)$ ]] && deploy $env || error_message
+```
+Firstly, we can actually remove the `if` declaration as it is actually implicit with the `[]` declaration. Secondly, we added the `if` syntax improvement `[[]]`, which has some nice added features on its predecessor, `[]`. Namely, you can declare variables with the use of quotations, which we have used here. It also allows us to use the `=~` operator, which allows us to use regular expressions (`^` denotes the start and `$` the end). Instead of searching through if something doesn't equal this or something doesnt equal that, we can declare the `!` to start with to negate the following expression.
+
+Now, if our new expression gives us a 0 status code, we can deploy to the environment. If the preceding expression gives us a 1 status code, then our `deploy $env` will have a 0 status code, meaning the program will execute the `error_message` function.
