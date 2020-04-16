@@ -1,0 +1,62 @@
+---
+layout: post
+title: Leetcode Wednesday - Part 2/x
+date: 2020-04-16 19:30:00 +0000
+categories: 9 Python Leetcode
+excerpt: Leetcode solution for no.9 easy
+---
+
+Determine whether an integer is a palindrome. An integer is a palindrome when it reads the same backward as forward.
+
+Note: This is easy if you convert to a string, then check if `inputAsStr[::-1] == inputAsStr` or something similar. However, I think that this is meaning for us to keep the integer type. So let's solve it that way.
+
+<br>
+
+## Solution
+
+I find the best way to construct algorithms is to describe the scene, and by scene, I mean describe the items I need to achieve the output. This doesn't have to include the functionality. For example:
+
+Firstly, have a number `n`, and with `n` we need to work out if the it is the same number when reveresed. This means that we need a 2 vars. 1 to pop numbers off, and 1 to put those numbers on. What we will return is a bool if the var we add numbers to is the same as the input var.
+
+```python
+def isPalindrome(self, n):
+    """(x: int) -> bool"""
+    x, y = n, 0
+
+    return y == n
+```
+
+Okay, so now we have our basic scene, we need to introduce the logic of how we achieve the `return`. We need to go over the input `x`, and pop of the integer. As it is an integer, we can set `x` to be `x//10`. This will shift `x` to the right. We now need a function for `y` that both adds the end integer to `y`, and shifts `y` to the left for each new integer that is added to `y`. We can achieve this with a small `lambda` function. To see this working, lets have an input of `12321` and look at the output of `x` and `y`.
+
+```python
+def isPalindrome(self, n):
+    """(x: int) -> bool"""
+    x, y = n, 0
+    print(x, y)
+    f = lambda: (y * 10) + x % 10
+    while x > 0:
+        x, y = x//10, f()
+        print(x, y)
+    return y == n
+
+# 12321 0
+# 1232 1
+# 123 12
+# 12 123
+# 1 1232
+# 0 12321
+```
+
+We start with our input and assign it to `x` and initilaise `y` to `0`. We then divide out `x` by `10` giving `1232` and execute `f(): (0 * 10) + 12321 % 10 = 1`. On our next iteration `x` is `123`, when `f(): (1 * 10) + 1232 % 10` which is `12` etc etc.
+
+## Final
+
+```python
+def isPalindrome(self, n):
+    """(x: int) -> bool"""
+    x, y = n, 0
+    f = lambda: (y * 10) + x % 10
+    while x > 0:
+        x, y = x//10, f()
+    return y == n
+```
