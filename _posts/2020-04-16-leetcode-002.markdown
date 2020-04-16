@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Leetcode Wednesday - Part 2/x
-date: 2020-04-16 19:30:00 +0000
+date: 2020-04-18 19:30:00 +0000
 categories: 9 Python Leetcode
 excerpt: Leetcode solution for no.9 easy
 ---
