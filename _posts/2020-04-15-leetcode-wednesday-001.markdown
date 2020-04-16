@@ -82,9 +82,9 @@ Finally, we need to add our bounds as a check to ensure our input is less than 3
 
 ```python
     def reverse(self, x):
-        INT32_MAX = 2147483647         # 2 ** 31 - 1
-        INT32_MIN = -2147483648        # -2 ** 31
-        INT32_MAX_DIV_10 = 214748364   # INT_MAX / 10
+        INT32_MAX = 2 ** 31 - 1
+        INT32_MIN = -2 ** 31
+        INT32_MAX_DIV_10 = INT_MAX / 10
         
         sign = 1 if x >= 0 else -1
         x = abs(x)
