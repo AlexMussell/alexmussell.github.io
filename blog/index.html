@@ -6,9 +6,7 @@ layout: default
   <h1 class="page-heading">{{ page.title }}</h1>
 {%- endif -%}
 
-{{ content }}
-
-{%- if paginator.posts.size > 0 -%}
+{%- if site.posts.size > 0 -%}
 <ul class="base-layout">
   <li>
     <h1 id="page-label">Blog</h1>
@@ -60,7 +58,7 @@ layout: default
         {% if page == paginator.page %}
           <span class="webjeda">{{ page }}</span>
         {% elsif page == 1 %}
-          <a href="/">{{ page }}</a>
+          <a href="/blog">{{ page }}</a>
         {% else %}
           <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
         {% endif %}
