@@ -8,7 +8,7 @@ layout: default
 
 {{ content }}
 
-{%- if site.posts.size > 0 -%}
+{%- if paginator.posts.size > 0 -%}
 <ul class="base-layout">
   <li>
     <h1 id="page-label">Blog</h1>
@@ -23,7 +23,7 @@ layout: default
       </form>
     </div>
 
-      {%- for post in site.posts -%}
+      {%- for post in paginator.posts -%}
         <li>
           {%- assign date_format = site.plainwhite.date_format | default: "%b %-d, %Y" -%}
           <a class="post-link" href="{{ post.url | relative_url }}">
@@ -48,7 +48,7 @@ layout: default
       {%- endfor -%}
     </ul>
     <!-- pagination -->
-    <!-- {% if paginator.total_pages > 1 %}
+    {% if paginator.total_pages > 1 %}
     <div class="pagination">
       {% if paginator.previous_page %}
         <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
@@ -72,7 +72,7 @@ layout: default
         <span>Next &raquo;</span>
       {% endif %}
     </div>
-    {% endif %} -->
+    {% endif %}
     <p class="feed-subscribe">
       <a href="{{ "/feed.xml" | relative_url }}">Subscribe via RSS!</a>
     </p>
