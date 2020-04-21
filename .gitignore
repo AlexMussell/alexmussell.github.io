@@ -60,7 +60,6 @@ _site/
 .jekyll-cache/
 .jekyll-metadata
 sitemap.xml
-plainwhite.gemspec
 node_modules
 
 Gemfile.lock
