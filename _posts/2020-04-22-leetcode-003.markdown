@@ -53,7 +53,7 @@ class Solution:
         charFreq = {}
         count = 0
 
-        if len(S) >= 50 or len(J) >= 50:
+        if len(S) > 50 or len(J) > 50:
             return 0
 
         for char in S:
