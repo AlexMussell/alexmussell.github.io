@@ -1,0 +1,72 @@
+---
+layout: post
+title: Leetcode Wednesday - Part 3/x
+date: 2020-04-22 19:30:00 +0000
+categories: 771 Python Leetcode
+excerpt: Leetcode solution for no.771 easy
+---
+
+Today we will be going through number 771 from Leetcode.
+
+## Jewels and Stones
+You're given strings J representing the types of stones that are jewels, and S representing the stones you have.  Each character in S is a type of stone you have.  You want to know how many of the stones you have are also jewels.
+
+The letters in J are guaranteed distinct, and all characters in J and S are letters. Letters are case sensitive, so "a" is considered a different type of stone from "A".
+
+S and J will consist of letters and have length at most 50.
+The characters in J are distinct.
+
+
+## Python one-liner
+If we were to not care about time and space complexity, this is a perfect place to to map the `S.count()` to each element element in `J` then sum the result. This is a nice looking, pythonic, one-liner.
+
+```python
+class Solution:
+    def numJewelsInStones(self, J, S):
+        return sum(map(S.count, J))
+```
+This passes each element of `J` into `S.count()` and returns the final result. However, this doesn't take into account any conditions, and has a time complexity of O(JS). We can improve on this by using a hash table (dictionary).
+
+
+## Hash Table
+So our scene has 2 strings `J` and `S`. What we need is a dictionary to add the frequency comparison values to, and a counter to count the amount of 'jewels' in our collection. 
+
+```python
+class Solution:
+    def numJewelsInStones(self, J, S):
+        """J: str, S: str -> int"""
+        charFreq = {}
+        count = 0
+
+        return count
+```
+
+Now we just need the functionality. First we add our 50 char limit. For every character (jewel) in `S`, we want to see how many times it appears. So we update our dictionary with each new jewel and increase its value if we come across it more than once.
+
+Once we have gone through the set of jewels, we need to see if our jewels appear in the pile of jewels. So for ever jewel we have, if it is also in the dictionary, we add the value corresponding to the key to our count to be returned. This is done for all jewels in our pile `J`.
+
+
+```python
+class Solution:
+    def numJewelsInStones(self, J, S):
+        """J: str, S: str -> int"""
+        charFreq = {}
+        count = 0
+
+        if len(S) >= 50 or len(J) >= 50:
+            return 0
+
+        for char in S:
+            if char not in charFreq:
+                charFreq[char] = 1
+            else:
+                charFreq[char] += 1
+
+        for char in J:
+            if char in charFreq:
+                count += charFreq[char]
+        
+        return count
+```
+
+This has a time complexity of O(n)
