@@ -16,6 +16,7 @@ The letters in J are guaranteed distinct, and all characters in J and S are lett
 S and J will consist of letters and have length at most 50.
 The characters in J are distinct.
 
+<br>
 
 ## Python one-liner
 If we were to not care about time and space complexity, this is a perfect place to to map the `S.count()` to each element element in `J` then sum the result. This is a nice looking, pythonic, one-liner.
@@ -27,6 +28,7 @@ class Solution:
 ```
 This passes each element of `J` into `S.count()` and returns the final result. However, this doesn't take into account any conditions, and has a time complexity of O(JS). We can improve on this by using a hash table (dictionary).
 
+<br>
 
 ## Hash Table
 So our scene has 2 strings `J` and `S`. What we need is a dictionary to add the frequency comparison values to, and a counter to count the amount of 'jewels' in our collection. 
