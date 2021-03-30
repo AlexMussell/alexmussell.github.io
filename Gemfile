@@ -6,4 +6,4 @@ gem "jekyll"
 gem "jekyll-paginate"
 gem 'jekyll-feed'
 gem 'jekyll-seo-tag'
-gem 'kramdown', "2.3.0"
+gem 'kramdown', "2.3.1"
